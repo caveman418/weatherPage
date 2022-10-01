@@ -9,11 +9,21 @@
     <title>Current Weather</title>
 </head>
 <body>
-    <div class="pane left">
-
+    <div class="search">
+        <input type="text" placeholder="City or ZIP Code">
+        <button type="button" id="search">Search</button>
     </div>
-    <div class="pane right">
-
+    <div class="pane">
+        <div class="weather">
+            <div class="temp">62</div>
+            <div class="condition">Partly Cloudy</div>
+            <div class="wind">4mph NW</div>
+        </div>
+        <div class="optionsPanel">
+            <button type="button" id="celcius">&#8451</button>
+            <button type="button" id="fah">&#8457</button>
+        </div>
+        <div class="description">Chicago, Illinois</div>
     </div>
 </body>
 </html>

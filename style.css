@@ -5,15 +5,44 @@ body {
 
     background-color: rgb(68, 131, 184, .5);
 
-    display: grid;
-    grid-template-columns: repeat(2, 25vw);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
-    align-content: center;
-    gap: 10vw;
+    align-items: center;
 }
 
 div.pane {
     background-color: white;
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(145, 145, 145);
     height: 25vw;
+    width: 25vw;
+}
+
+.search {
+    width: 25vw;
+
+    display: flex;
+    gap: 10px;
+}
+
+.search input {
+    height: 1.5rem;
+    width: 100%;
+    outline: none;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
+
+.search button {
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.search button:hover {
+    transform: translateY(3%);
 }
