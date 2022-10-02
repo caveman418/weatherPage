@@ -10,6 +10,14 @@ const fButton = document.querySelector('#fah');
 const description = document.querySelector('.description');
 const unit = document.querySelector('#unit');
 
+(async function () { //automatically load Chicago's weather when the page is loaded
+    const query = searchBar.value;
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Chicago&APPID=489b4b68f1b5193a8aff400d9569466f`)
+    const data = await response.json();
+    searchBar.setCustomValidity('');
+    updateWeather(data);
+})();
+
 searchButton.addEventListener('mousedown', async () => {
     try {
         const query = searchBar.value;
