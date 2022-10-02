@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'lato';
+    src: url(./assets/fonts/Lato/Lato-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'lato',Arial, Helvetica, sans-serif;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -17,6 +26,11 @@ div.pane {
     border: 1px solid rgb(145, 145, 145);
     height: 25vw;
     width: 25vw;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: 80% auto;
+    grid-template-rows: 50% auto;
 }
 
 .search {
@@ -27,13 +41,17 @@ div.pane {
 }
 
 .search input {
-    height: 1.5rem;
+    height: 2rem;
     width: 100%;
     outline: none;
     border-radius: 2rem;
     border: none;
     font-size: 1.3rem;
     padding-left: 10px;
+}
+
+.search input:invalid {
+    border: 2px maroon solid;
 }
 
 .search button {
@@ -45,4 +63,29 @@ div.pane {
 
 .search button:hover {
     transform: translateY(3%);
+}
+
+.description {
+    grid-column: 1/-1;
+    align-self: end;
+    font-size: 3rem;
+}
+
+.weather {
+    align-self: center;
+}
+
+.temp, #unit, .deg {
+    font-size: 6rem;
+}
+
+.condition, .wind {
+    font-size: 2rem;
+}
+
+.optionsPanel button {
+    width: 5vw;
+    height: 5vw;
+    margin: 5px;
+    font-size: 3rem;
 }

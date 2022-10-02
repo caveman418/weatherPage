@@ -10,18 +10,18 @@
 </head>
 <body>
     <div class="search">
-        <input type="text" placeholder="City or ZIP Code">
+        <input type="text" placeholder="Search by City" id="queryCity" value="Chicago">
         <button type="button" id="search">Search</button>
     </div>
     <div class="pane">
         <div class="weather">
-            <div class="temp">62</div>
+            <span class="temp">69</span><span class="deg">&deg;</span><span id="unit">F</span>
             <div class="condition">Partly Cloudy</div>
             <div class="wind">4mph NW</div>
         </div>
         <div class="optionsPanel">
-            <button type="button" id="celcius">&#8451</button>
-            <button type="button" id="fah">&#8457</button>
+            <button type="button" id="celsius">&deg;C</button>
+            <button type="button" id="fah">&deg;F</button>
         </div>
         <div class="description">Chicago, Illinois</div>
     </div>
